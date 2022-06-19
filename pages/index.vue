@@ -1,5 +1,7 @@
 <template>
- <h1>What happens here</h1>
+  <div>
+    <h1>Bienvenue ici</h1>
+  </div>
 </template>
 
 <script lang="ts">
@@ -9,3 +11,4 @@ export default Vue.extend({
   name: 'IndexPage',
 })
 </script>
+x
