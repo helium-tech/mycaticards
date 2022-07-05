@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center justify-center w-full h-auto p-6 bg-gradient-to-b from-purple-600 to-pink-500">
+    <div class="flex flex-col items-center justify-center w-full h-auto p-6 bg-gradient-to-b from-purple-600 to-pink-500 font-police">
           <img src="@/assets/images/avatar.jpg" alt="" class="m-auto rounded-full" height="40%" width="40%">
     <div class="flex flex-col justify-center my-5 text-xl font-semibold text-center text-white">
         <h3 class="">HubSpot Blogs</h3>
