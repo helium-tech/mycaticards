@@ -29,7 +29,7 @@ export default {
     buildModules: [
         // https://go.nuxtjs.dev/typescript
         '@nuxt/typescript-build',
-        
+
         '@nuxtjs/style-resources',
     ],
 
@@ -39,7 +39,18 @@ export default {
         '@nuxtjs/axios',
         // https://go.nuxtjs.dev/pwa
         '@nuxtjs/pwa',
+        'vcards-js',
     ],
+    build: {
+        extend(config, { isDev, isClient }) {
+
+            config.node = {
+                fs: 'empty'
+            }
+
+            // ....
+        }
+    },
 
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
     axios: {
@@ -54,8 +65,6 @@ export default {
         },
     },
 
-    // Build Configuration: https://go.nuxtjs.dev/config-build
-    build: {},
 
     tailwindcss: {
         cssPath: '~/assets/css/tailwind.css',

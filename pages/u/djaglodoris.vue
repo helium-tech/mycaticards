@@ -26,8 +26,10 @@
 
         <CallToActionPro iconleft="logos_facebook.png" iconright="ic_baseline-open-blue.png"
           title="Tout se passe sur Facebook " link="@djaglodoris" />
+
+          <button @click="addContact">What happen</button>
         <div class="social-media">
-          <img class="icons" src="~/assets/images/Instagram-Icon 1.png" alt="" />
+          <img  class="icons" src="~/assets/images/Instagram-Icon 1.png" alt="" />
           <img class="icons" src="~/assets/images/logos_linkedin-icon.png" alt="" />
           <img class="icons" src="~/assets/images/logos_youtube-icon.png" alt="" />
           <img class="icons" src="~/assets/images/twiter.png" alt="" />
@@ -45,6 +47,8 @@ import CallToActionPro from "../../components/user/CallToActionPro.vue";
 import ProProfile from "../../components/user/ProProfile.vue";
 import ContactBtn from "../../components/user/ContactBtn.vue";
 
+import Swal from 'sweetalert2';
+
 export default {
   layout: "userlink",
   components: { ProProfile, CallToActionPro, ContactBtn },
@@ -56,22 +60,48 @@ export default {
           hid: "description", name: "description",
           content: "Mon objectif est de développer des solutions innovantes qui révolutionnent  le monde et participer à l’inclusion de la jeune fille dans le monde de la technologie !",
 
-        }, 
-        { 
-          hid: 'keywords', name: 'keywords', 
-          content: 'Djaglo Doris, Djaglo, Doris' 
         },
-        { 
-          hid: 'og:title', property: 'og:title', 
-          content: 'Djaglo Doris - Développeur Web et Féministe' 
+        {
+          hid: 'keywords', name: 'keywords',
+          content: 'Djaglo Doris, Djaglo, Doris'
         },
-        { 
-          hid: 'og:description', property: 'og:description', 
-          content: 'Mon objectif est de développer des solutions innovantes qui révolutionnent  le monde et participer à l’inclusion de la jeune fille dans le monde de la technologie !' 
+        {
+          hid: 'og:title', property: 'og:title',
+          content: 'Djaglo Doris - Développeur Web et Féministe'
+        },
+        {
+          hid: 'og:description', property: 'og:description',
+          content: 'Mon objectif est de développer des solutions innovantes qui révolutionnent  le monde et participer à l’inclusion de la jeune fille dans le monde de la technologie !'
         },
         { hid: 'og:image', property: 'og:image', content: './djaglo_doris_profile.jpg' },
         { hid: 'og:url', property: 'og:url', content: 'https://my.caticards.com/u/djaglodoris' },
       ],
+    }
+
+  },
+
+
+  methods: {
+    async addContact() {
+      
+      // contact.name = {givenName: "John", familyName: "Doe"};
+      // contact.email = [{type: "work", value: "johndoe@example.com"}];
+      // contact.phoneNumbers = [{type: "work", value: "+1 (555) 555-5555"}];
+      // let contactAdded = await window.navigator.contacts.create(contact);
+      // if(contactAdded) {
+      //   Swal.fire({
+      //     icon: 'success',
+      //     title: 'Le contact a été ajouté avec succès !',
+      //     showConfirmButton: false,
+      //     timer: 2000
+      //   });
+      // } else {
+      //   Swal.fire({
+      //     icon: 'error',
+      //     title: 'Erreur lors de l\'ajout du contact',
+      //     confirmButtonText: 'Ok'
+      //   });
+      // }
     }
   }
 };
