@@ -1,0 +1,68 @@
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media screen and (min-width: map-get($breakpoints, tablets)) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin btn {
+    padding: 15px 30px;
+    width: 15rem;
+    margin-top: 15px;
+    background-color: $color-primary;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 50px;
+    transition: transform 400ms;
+    transform: scale(1);
+    &:hover {
+        transform: scale(1.05)
+    }
+    &:visited {
+        color: white;
+    }
+    @include mobile-only() {
+        font-size: 16px;
+        padding: 15px 5px;
+    }
+}
+
+@mixin link {
+    font-size: 18px;
+    color: $color-primary;
+    padding-bottom: 0.3rem;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    &:hover {
+        color: $text-color;
+        border-bottom: 1px solid $text-color;
+    }
+}
+
+@mixin user-btn {
+    background-color: $call-border-1;
+    border: none;
+    padding: 10px;
+    color: $border-color-1;
+    margin: 20px 0 10px 0;
+    border-radius: $btn-border-radius;
+    cursor: pointer;
+    transform: scale(0.8);
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        color: darken($border-color-1, 5%);
+        background-color: lighten($call-border-1, 5%);
+        transform: scale(0.9)
+    }
+}
