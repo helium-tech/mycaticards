@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800&display=swap');
+@import url('https://unicons.iconscout.com/release/v2.1.6/css/unicons.css');
+body {
+    font-family: 'Poppins', sans-serif;
+    & p {
+        color: $text-color;
+        font-weight: 300;
+        font-size: 18px;
+        @include mobile-only {
+            font-size: 16px;
+        }
+    }
+    & h1 {
+        color: $title-color;
+        font-weight: 800;
+        font-size: 40px;
+        @include mobile-only {
+            font-size: 25px;
+            margin-top: 5px;
+        }
+    }
+    & h2 {
+        font-size: 32px;
+        font-weight: 600;
+        @include mobile-only {
+            font-size: 18px;
+        }
+    }
+}
